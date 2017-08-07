@@ -47,6 +47,8 @@ public class Main extends Application {
         File basic = new File(baseString+"save" + Main.pathSign + "basicInfo.pjx");
         if (new File (baseString+"save").exists() == false)
             new File (baseString+"save").mkdirs();
+        File fii = new File(baseString+ "save" + pathSign + "Courses");
+        if (!fii.exists()) fii.mkdirs();
         if (!basic.exists()) {
             basic.getParentFile().mkdirs();
             basic.createNewFile();
